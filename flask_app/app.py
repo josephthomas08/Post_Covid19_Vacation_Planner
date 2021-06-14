@@ -1,5 +1,6 @@
 #Import Dependencies
 from flask import Flask, render_template
+import os
 
 #Adding sqlalchemy dependencies
 from sqlalchemy.schema import MetaData, Table
@@ -14,7 +15,9 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///world_data_forecast.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy()
 db.init_app(app)
-
+api_key = os.environ["API_KEY"]
+api_key_two = os.environ["API_KEY_TWO"]
+places_api = os.environ["PLACES_API"]
 
 def get_data():
     """
@@ -44,10 +47,10 @@ def get_data():
 @app.route('/')
 def index():
     result_json = get_data()
-    return render_template("index2.html", result_json=result_json )
+    return render_template("index2.html", result_json=result_json, api_key=api_key, api_key_two=api_key_two, places_api=places_api)
 
 
 @app.route('/vaccination-data')
 def vaccination_data():
     result_json = get_data()
-    return render_template("index.html", result_json=result_json )
+    return render_template("index.html", result_json=result_json,api_key=api_key, api_key_two=api_key_two, places_api=places_api )
