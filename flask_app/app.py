@@ -15,9 +15,9 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///world_data_forecast.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy()
 db.init_app(app)
-api_key = os.environ["API_KEY"]
-api_key_two = os.environ["API_KEY_TWO"]
-places_api = os.environ["PLACES_API"]
+api_key = str(os.environ["API_KEY"])
+api_key_two = str(os.environ["API_KEY_TWO"])
+places_api = str(os.environ["PLACES_API"])
 
 def get_data():
     """
