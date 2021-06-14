@@ -163,9 +163,9 @@
 
 
   <script>
-    const API_KEY = {{ API_KEY|string }};
-    const API_KEY_TWO = {{ API_KEY_TWO|string }};
-    const PLACES_API = {{ PLACES_API|string }};
+    const API_KEY = {{ API_KEY|string() }};
+    const API_KEY_TWO = {{ API_KEY_TWO|string() }};
+    const PLACES_API = {{ PLACES_API|string() }};
     init_map();
     init_dropdowns();
   </script>
