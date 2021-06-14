@@ -1,7 +1,7 @@
 
 // Accessing the airport data
-let airportDataURL = "http://api.aviationstack.com/v1/airports?access_key=8d32007474ce2f1184533cb9ce09c196";
-let flightsDataURL = "http://api.aviationstack.com/v1/flights?access_key=8d32007474ce2f1184533cb9ce09c196"
+let airportDataURL = "https://api.aviationstack.com/v1/airports?access_key=8d32007474ce2f1184533cb9ce09c196";
+let flightsDataURL = "https://api.aviationstack.com/v1/flights?access_key=8d32007474ce2f1184533cb9ce09c196"
 
 let map;
 let streets;
