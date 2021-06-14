@@ -47,10 +47,10 @@ def get_data():
 @app.route('/')
 def index():
     result_json = get_data()
-    return render_template("index2.html", result_json=result_json, api_key=api_key, api_key_two=api_key_two, places_api=places_api)
+    return render_template("index2.html", result_json=result_json, API_KEY=api_key, API_KEY_TWO=api_key_two, PLACES_API=places_api)
 
 
 @app.route('/vaccination-data')
 def vaccination_data():
     result_json = get_data()
-    return render_template("index.html", result_json=result_json,api_key=api_key, api_key_two=api_key_two, places_api=places_api )
+    return render_template("index.html", result_json=result_json, API_KEY=api_key, API_KEY_TWO=api_key_two, PLACES_API=places_api)
